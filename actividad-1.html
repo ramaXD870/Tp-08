@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuadrado</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: lightgray;
+        }
+
+        .box-izquierda-arriba {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .box-derecha-arriba {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(51, 255, 0);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .box-izquierda-abajo {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(238, 255, 0);
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        .box-derecha-abajo {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(17, 0, 255);
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+
+            <div class="box-izquierda-arriba"></div>
+            <div class="box-derecha-arriba"></div>
+            <div class="box-izquierda-abajo"></div>
+            <div class="box-derecha-abajo"></div>
+        </div>
+    </body>
+</html>
