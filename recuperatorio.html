@@ -6,31 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>recuperatorio</title>
     <style>
-        body { /*lo puse para que el cuadro se vea en el centro*/
-            display: flex; /*este lo use para poder acomodar el cuadro*/
-            justify-content: center;/*este lo use para que todas las cosas que colorcara se vayan al centro*/
-            height: 100vh; /*este lo utilize para que se la pagina se vea el 100% de la pantalla*/
-            
+        body {
+            /*lo puse para que el cuadro se vea en el centro*/
+            display: flex;
+            /*este lo use para poder acomodar el cuadro*/
+            justify-content: center;
+            /*este lo use para que todas las cosas que colorcara se vayan al centro*/
+            height: 100vh;
+            /*este lo utilize para que se vea el 100% de la pantalla*/
+
         }
 
-        .cuadro { /* esta clase es para la tarjeta*/
-            border: solid; /*este lo utlilice para el borde ya que pone negro el borde*/
-            border-radius: 10px; /*este lo utilice para que las esquinas de los bordes se ondulen*/
-            padding: 16px; /*esta la utilice para relleno del cuadro*/
-            width: 470px; /*este lo utilice para el tamaño del cuadro*/
-            height: 530px; /*este lo utilice para la altura del cuadro*/
-            position: relative; /*este lo utilice para que sobre pase las palabras en la imagen*/
-            background-color: white; /*este lo utilice para que el fonde del cuadro se vea blanco*/
+        .cuadro {
+            /* esta clase es para la tarjeta*/
+            border: solid;
+            /*este lo utlilice para el borde ya que pone negro el borde*/
+            border-radius: 10px;
+            /*este lo utilice para que las esquinas de los bordes se ondulen*/
+            padding: 16px;
+            /*esta la utilice para relleno del cuadro*/
+            width: 470px;
+            /*este lo utilice para el tamaño del cuadro*/
+            height: 530px;
+            /*este lo utilice para la altura del cuadro*/
+            background-color: white;
+            /*este lo utilice para que el fonde del cuadro se vea blanco*/
         }
-        .sobrepaso-de-la-imagen { /*esta es la clase que use pàra que las cosas que pongan se vean arriba de la imagen*/
-            border-radius: 10px;  /*este lo utilice para que las esquinas de los bordes se ondulen*/
-            padding: 26px; /*esta la utilice para el relleno del fondo del cuadro*/
-            width: 470px; /*este lo utilice para el tamaño de la del fondo del cuadro*/
-            height: 530px;  /*este lo utilice para la altura del fondo del cuadro*/
-            background-color: rgb(221, 206, 209); /*este lo utilice par el color del fondo*/
-            display: flex; /*este lo use para poder acomodar el fondo*/
-            justify-content: center;  /*este lo use para poder acomodar el fondo del cuadro en centro*/
-            align-items: center;  /*este lo utilice para que los items del fondo se queden en el centro*/
+
+        .sobrepaso-de-la-imagen {
+            /*esta es la clase que use pàra que las cosas que pongan se vean arriba de la imagen*/
+            border-radius: 10px;
+            /*este lo utilice para que las esquinas de los bordes se ondulen*/
+            padding: 26px;
+            /*esta la utilice para el relleno del fondo del cuadro*/
+            width: 470px;
+            /*este lo utilice para el tamaño de la del fondo del cuadro*/
+            height: 530px;
+            /*este lo utilice para la altura del fondo del cuadro*/
+            background-color: rgb(221, 206, 209);
+            /*este lo utilice par el color del fondo*/
+            display: flex;
+            /*este lo use para poder acomodar el fondo*/
+            justify-content: center;
+            /*este lo use para poder acomodar el fondo del cuadro en centro*/
+            align-items: center;
+            /*este lo utilice para que los items del fondo se queden en el centro*/
+        }
+
+        .dentro-de-la-imagen {
+            position: absolute;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            bottom:  20px;
         }
     </style>
 </head>
@@ -38,39 +66,50 @@
 <body>
 
     <div class="sobrepaso-de-la-imagen"> <!--este div es el color del fondo del cuadro-->
-        <div class="cuadro" > <!--est div es todo el cuadro-->
-            <div style="display: flex; justify-content: center;align-items: center;position: relative;"> <!--este div lo utilice para las imagenes-->
+        <disv class="cuadro"> <!--est div es todo el cuadro-->
+            <div style="display: flex; justify-content: center;align-items: center;position: relative;">
+                <!--este div lo utilice para las imagenes-->
                 <img src="añaña.jpeg" alt="" width="450px"> <!--esta es mi imagen principal-->
-                <div style="position: absolute; right: 30px;bottom: 30px;"> 
-                    <img src="vericaciooon.png" alt="vericaciooon" width="50px"> <!--esta imagen es la secundaria ya que sobre pasa la pricipal-->
+
+                <div class="dentro-de-la-imagen">
+
+                    <div style=" color: white;">
+                        <!--este div tambien lo utlicie par que estas palabras sobre pasen la imagen-->
+                        <p style="background-color: rgb(8, 197, 255); width: 120px; ">Lincensatura en</p>
+                    
+                        <!--este div lo utilice para las palabras que sobrepasan la imagen-->
+                        <p style="font-size: larger;color: white;"><b>Administracion de Areas Naturales</b></p>
+                    </div>
+                    <div style="">
+                        <img src="vericaciooon.png" alt="vericaciooon" width="50px">
+                        <!--esta imagen es la secundaria ya que sobre pasa la pricipal-->
+                    </div>
+
                 </div>
-                <div style="position: absolute; left: 20px; bottom: 30px; color: rgb(255, 255, 255);"> <!--este div lo utilice para las palabras que sobrepasan la imagen-->
-                    <p style="font-size: larger;"><b>Administracion de Areas Naturales</b></p>
-                </div> 
-                <div style="position: absolute; left: 20px; bottom: 70px; color: white;"> <!--este div tambien lo utlicie par que estas palabras sobre pasen la imagen-->
-                    <p style="background-color: rgb(8, 197, 255);">Lincensatura en</p>
-                </div>
-    
             </div>
-            <div style="display: flex;justify-content: center;align-items: center; gap: 40px;"> <!--este div esta todas las palbras que van abajo del cuadro-->
+            <div style="display: flex;justify-content: center;align-items: center; gap: 40px;">
+                <!--este div lo utilice para que las imagenes y palabras valln debajo de la imagen principal-->
                 <div>
                     <div>
                         <img src="pinguiiiino.png" alt="pinguino" width="80px"> <!--esta es la imagen del pinguino-->
                     </div>
                     <div>
-                        <img src="vericaciooon.png" alt="verificacion" width="80px"><!--esta imagen es la verificacion-->
+                        <img src="vericaciooon.png" alt="verificacion"
+                            width="80px"><!--esta imagen es la verificacion-->
                     </div>
                 </div>
-                <div style="font-size: larger;color: blue;"> <!--este div lo utilice para las palabras que van al lado de la imagen-->
+                <div style="font-size: larger;color: blue;">
+                    <!--este div lo utilice para las palabras que van al lado de la imagen-->
                     <div>
                         <p> Lic. en Administracion de Areas Naturales</p> <!--primera estrofa-->
 
                     </div>
-                    <div style="font-size: small;color: rgb(0, 168, 168);"> <!--este lo utilice para cambiar de color a las palabras-->
+                    <div style="font-size: small;color: rgb(0, 168, 168);">
+                        <!--este lo utilice para cambiar de color a las palabras-->
                         <p>precencial:Pto.Madyn</p>
                         <p>duracion 5 años</p>
                     </div>
-                    <div style="font-size: large;color: blue;"> 
+                    <div style="font-size: large;color: blue;">
                         <p>Tec. Uni. Guardaparques</p> <!--segunda estrofa-->
                     </div>
                     <div style="font-size: small;color: rgb(0, 168, 168);">
@@ -80,8 +119,8 @@
                 </div>
 
             </div>
-          
-        </div>
+
+    </div>
 
     </div>
 
